@@ -1,0 +1,1 @@
+preciso fazer o grafico do ara.
