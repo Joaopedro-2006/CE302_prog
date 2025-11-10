@@ -1,7 +1,7 @@
 #Exemplo de estrutura IF-ELSE no R:
 
-faltas = 10  
-nota = 70 
+faltas = 16
+nota = 71
 if (nota >= 70 & faltas < 15) {
   result = "aprovado"
 } else if (nota < 70) {
@@ -13,7 +13,7 @@ if (nota >= 70 & faltas < 15) {
 result
 
 #Exercicio saudação
-h <- 2
+h <- 11
 
 if (h >= 6 & h < 12) {
   saudacao <- "Bom dia!"
@@ -130,6 +130,16 @@ while(tentativas < n_max) {
 }
 tentativas
 
+tentativas = 1 
+repeat {
+  l1 = sample(1:6, 3, replace = TRUE)
+  l1_ordenado = sort(l1)
+  print(l1_ordenado)
+  seque = sum(ifelse(diff(l1_ordenado) == 1, TRUE, FALSE))
+  if(seque == 2) break
+  tentativas = tentativas + 1
+}
+tentativas
 
 # Exercício · Número médio de tentativas de lançamento de dados
 
@@ -156,13 +166,13 @@ hist(output)
 
 # Formula de baskara
 
-baskara <- function(a, b = 1, c = 0) {
+baskara <- function(a = 2, b = 1, c = 0) {
   delta <- b^2 - 4 * a * c
   x <- (-b + c(-1, 1) * sqrt(delta))/(2 * a)
   return(x)
 }
 
-x <- baskara(a = 2, b = -3, c = -3)
+x = baskara(a= 2, b = 1, c =0)
 x
 
 
@@ -200,7 +210,7 @@ calcula_imc <- function(peso, altura) {
   classif <- labels[findInterval(imc, limits)]
   return(list(IMC = imc, Classificao = classif))
 }
-calcula_imc(peso = 80, altura = 1.80)
+calcula_imc(peso = 86, altura = 1.85)
 
 
 # Argumento com valor default
