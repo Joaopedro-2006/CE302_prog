@@ -254,3 +254,4 @@ calcula_imc <- function(...) {
 }
 
 calcula_imc(peso = 90, altura = 1.70)
+
